@@ -4,10 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
+var index_routes_1 = __importDefault(require("./routes/index-routes"));
 var app = express_1.default();
-app.get('/', function (req, res) {
-    res.send('hi im here....');
-});
+app.use(index_routes_1.default);
 app.listen(3000, function () {
     console.log('running....');
 });
