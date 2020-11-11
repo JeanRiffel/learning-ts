@@ -1,7 +1,10 @@
 import express from 'express';
+import getCustomers from '../models/getCustomers'
 
 const Index = (req : express.Request, res : express.Response )=>{
-    res.send('hi');
+
+    const value = getCustomers();    
+    res.send(value);
 }
 
 export default Index;
